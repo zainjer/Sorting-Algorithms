@@ -139,9 +139,12 @@ namespace SortingAlgorithms
             long swaps = 0;
             long steps = 0;
             long passes = 0;
+
+            var swapped = true;
             
-            for(var i = 0; i < len; i++)
+            while(swapped)
             {
+                swapped = false;
                 //forward direction 
                 for (var j = 0; j < len - 1; j++)
                 {
@@ -149,13 +152,16 @@ namespace SortingAlgorithms
                     {
                         list = Swap(list,j,j+1);
                         swaps++;
+                        swapped = true;
                     }
                     steps++;
-                    
                     //Debug code
                     ////PrintList(list,true);
                     ////Console.WriteLine(" < Forward"+i);
                 }
+
+                if (!swapped) {break;}
+                
                 //reverse direction
                 for (var j = len-1; j >0; j--)
                 {
