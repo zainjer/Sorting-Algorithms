@@ -136,14 +136,7 @@ namespace SortingAlgorithms
         #endregion
 
 
-        static ListWithInfo CocktailShakerSort(int[] list)          //https://en.wikipedia.org/wiki/Cocktail_shaker_sort
-        {
-            var len = list.Length;
-            long steps = 0;
-                                            
-            throw new NotImplementedException();
 
-        }
         static int[] GenerateRandomIntegers(int length,int minValue,int maxValue)
         {
             var list = new List<int>();
